@@ -1,4 +1,6 @@
 ﻿var currentPage = 0;
+var flatCurrentId = 1;
+var flatList = [];
 window.onload = function () {
     moveScreenToRight();
 }
@@ -28,4 +30,10 @@ function footerPagination() {
     } else {
         $("#imageLeft").attr("src", "Images/footer/Left_Off.png");
     }
+}
+function Flat(flatName,flatAddress) {
+    this.id = flatCurrentId;
+    flatCurrentId++;
+    this.flatName = flatName;
+    this.flatAddress = flatAddress;
 }
