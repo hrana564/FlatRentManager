@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -111,11 +112,13 @@
     <Content Include="Images\footer\Right_Off.png" />
     <Content Include="Images\footer\Right_On.png" />
     <Content Include="index.html" />
+    <Content Include="index1.html" />
     <Content Include="packages.config" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="harry.html" />
     <Content Include="himu.html" />
     <Content Include="Scripts\customScript.js" />
+    <Content Include="Scripts\customScript1.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.js" />
