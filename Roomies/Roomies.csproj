@@ -113,8 +113,8 @@
     <Content Include="index.html" />
     <Content Include="packages.config" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
-    <Content Include="page1.html" />
-    <Content Include="page2.html" />
+    <Content Include="harry.html" />
+    <Content Include="himu.html" />
     <Content Include="Scripts\customScript.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />
