@@ -13,6 +13,7 @@ function moveScreenToLeft() {
     if ($("#indexPage" + (currentPage - 1)).length) {
         currentPage--;
         $("#indexPageHeader").html($("#indexPage" + currentPage).html());
+        initialSetupPage(currentPage);
         footerPagination();
     }
 }
@@ -20,7 +21,25 @@ function moveScreenToRight() {
     if ($("#indexPage" + (currentPage + 1)).length) {
         currentPage++;
         $("#indexPageHeader").html($("#indexPage" + currentPage).html());
+        initialSetupPage(currentPage);
         footerPagination();
+    }
+}
+function initialSetupPage(pageId){
+    if (pageId == 1) {
+
+    }
+    else if (pageId == 2) {
+        AddMembersHeaderPagination();
+    }
+    else if (pageId == 3) {
+
+    }
+    else if (pageId == 4) {
+
+    }
+    else if (pageId == 5) {
+
     }
 }
 function footerPagination() {
@@ -51,5 +70,10 @@ function Members(flatId,memberName,memberAge,memberContact) {
     this.memberContact = memberContact;
 }
 function AddMembersHeaderPagination() {
-
+    var htmlBody='';
+    flatList.forEach(function (flat, index) {
+        htmlBody += '<button id="flatHeader' + flat.id + '" onclick="">' + flat.flatName + '</button>';
+    });
+    console.log(htmlBody);
+    $("#addMemberHeaderPagination").html(htmlBody);
 }
