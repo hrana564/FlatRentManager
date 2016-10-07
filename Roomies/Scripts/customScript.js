@@ -4,6 +4,10 @@ var flatList = [];
 var memberId = 1;
 window.onload = function () {
     moveScreenToRight();
+    flatList.push(new Flat("A18 - 201", "sunway"));
+    flatList.push(new Flat("A19 - 201", "splendor"));
+    flatList.push(new Flat("A20 - 201", "sparklet"));
+    flatList.push(new Flat("A21 - 201", "sanghariya"));
 }
 function moveScreenToLeft() {
     if ($("#indexPage" + (currentPage - 1)).length) {
@@ -45,4 +49,7 @@ function Members(flatId,memberName,memberAge,memberContact) {
     this.memberName = memberName;
     this.memberAge = memberAge;
     this.memberContact = memberContact;
+}
+function AddMembersHeaderPagination() {
+
 }
