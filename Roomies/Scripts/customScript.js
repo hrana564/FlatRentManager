@@ -1,6 +1,8 @@
 ﻿var currentPage = 0;
 var flatCurrentId = 1;
 var flatList = [];
+var memberList = [];
+var me
 var memberId = 1;
 window.onload = function () {
     moveScreenToRight();
@@ -72,8 +74,25 @@ function Members(flatId,memberName,memberAge,memberContact) {
 function AddMembersHeaderPagination() {
     var htmlBody='';
     flatList.forEach(function (flat, index) {
-        htmlBody += '<button id="flatHeader' + flat.id + '" onclick="">' + flat.flatName + '</button>';
+        htmlBody += '<button id="flatHeader' + flat.id + '" style="height:35px;margin:5px;" onclick="LoadAddMembersFooter(' + flat.id + ')">' + flat.flatName + '</button>';
     });
     console.log(htmlBody);
     $("#addMemberHeaderPagination").html(htmlBody);
+}
+function LoadAddMembersFooter(flatId) {
+    $("#addMemberFormFlatId").val(flatId);
+    $("#formAddMember")[0].reset();
+    var htmlBody = '<table border="1" cellspacing="10" cellpadding="10" style="position:relative;left:20%;width:70%"><tr> <th>Name</th><th>Age</th><th>Contact</th> </tr>';
+    memberList.forEach(function (member, index) {
+        if (member.flatId = flatId) {
+            htmlBody += '<tr> <td>' + member.memberName+'</td><td>' + member.memberAge +'</td><td>' + member.memberContact +'</td> </tr>'
+        }
+    });
+    htmlBody += '</table>';
+    $("#addMemberGrid").html(htmlBody);
+}
+function SaveNewMember() {
+    memberList.push(new Members($("#addMemberFormFlatId").val(), $("#addMemberFormMemberName").val(), $("#addMemberFormMemberAge").val(), $("#addMemberFormMemberMobile").val()))
+    LoadAddMembersFooter($("#addMemberFormFlatId").val());
+    return false;
 }
