@@ -1,6 +1,7 @@
 ﻿var currentPage = 0;
 var flatCurrentId = 1;
 var flatList = [];
+var memberId = 1;
 window.onload = function () {
     moveScreenToRight();
 }
@@ -36,4 +37,12 @@ function Flat(flatName,flatAddress) {
     flatCurrentId++;
     this.flatName = flatName;
     this.flatAddress = flatAddress;
+}
+function Members(flatId,memberName,memberAge,memberContact) {
+    this.memberId = memberId;
+    memberId++;
+    this.flatId = flatId;
+    this.memberName = memberName;
+    this.memberAge = memberAge;
+    this.memberContact = memberContact;
 }
